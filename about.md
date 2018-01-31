@@ -11,8 +11,8 @@ permalink: /about/
 
 ![Anders Einar Hilden]({{ "/images/anders_einar_hilden.jpg" | absolute_url }}){:style="float:right"}
 
-Anders Einar (known around the Internet as *Kagee* or *hildenae*) Hilden is 31 years old. He is interested in photography, computers and programming, and is currently working with IT Security/Incident management in Oslo, Norway. 
+Anders Einar Hilden (known around the Internet as *Kagee* or *hildenae*) is 31 years old. He is interested in photography, computers and programming, and is currently working with IT Security/Incident management in Oslo, Norway. 
 
 He has a bachelor's degree in computer science from [Gjøvik University College](http://english.hig.no/).
 
-Feel free to contact me using the comment form below if you don't have any other means of contacting me.
+Feel free to contact me using the comment form or social media links below if you don't have any other means of contacting me.
