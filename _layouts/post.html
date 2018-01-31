@@ -6,7 +6,8 @@ layout: default
   <h1>{{ page.title }}</h1>
 
   <div class="date">
-    Written on {{ page.date | date: "%A, %Y-%m-%dT%R%z" }}{{ page.updated | date: ', last updated on last updated %A, %Y-%m-%dT%R%z' }}
+    Written on {{ page.date | date: "%A, %Y-%m-%dT%R%z" }}
+    {{ page.updated | date: 'Last updated on %A, %Y-%m-%dT%R%z' }}
   </div>
   
   <div class="entry">
