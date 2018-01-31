@@ -8,9 +8,7 @@ categories:
 
 In late July the following question was posted on a IRC-channel i frequent: 
 
-{% blockquote %}
-Anyone care to devise what an obfuscated PHP payload does?
-{% endblockquote %}
+> Anyone care to devise what an obfuscated PHP payload does?
 
 Sure, why not, sounds like a challenge. This is part 1 of a series of blogposts explaining the headache-inducing three hours that followed.
 
