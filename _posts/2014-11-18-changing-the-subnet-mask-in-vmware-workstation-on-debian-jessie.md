@@ -15,7 +15,7 @@ Oh wait … I can't change it. The field for subnet mask in the Virtual Network 
 
 <!-- more -->
 
-![VMware Virtual Network Editor: the field for subnet mask is not editable]({{ "/images/vmware_workstation_subnet_mask_nochange.png" | absolute_url }}){:title:"VMware Virtual Network Editor: the field for subnet mask is not editable"}
+![VMware Virtual Network Editor: the field for subnet mask is not editable]({{ "/images/vmware_workstation_subnet_mask_nochange.png" | absolute_url }}){:title="VMware Virtual Network Editor: the field for subnet mask is not editable"}
 *VMware Virtual Network Editor: the field for subnet mask is not editable*
 
 Let's keep googling - plenty matches, but everyone keeps insisting it can be changed in the GUI, or mixes the subnet mask with the subnet IP. Some posts blame permission, but since the Virtual Network Editor always runs as root, that's not the problem. There are no listings for the vmnets in ```/etc/network/interfaces``` or ```/etc/network/interfaces.d/``` and changing the subnet mask in NetworkManager does nothing.
