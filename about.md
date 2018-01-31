@@ -1,15 +1,20 @@
 ---
 layout: page
-title: About
+title: "about"
+date: 2014-04-20 22:22
+updated: 2014-10-10 16:08
+comments: true
+sharing: true
+footer: true
 permalink: /about/
 ---
 
-Some information about you!
+{% img right /images/anders_einar_hilden.jpg 'Anders Einar Hilden' 'Anders Einar Hilden' %}
 
-### More Information
+Anders Einar (*Kagee*) Hilden is 29 years old. He is interested in photography, computers and programming, and is currently working with IT Security/Incident management in Oslo, Norway. 
 
-A place to include any other types of information that you'd like to include about yourself.
+He has a bachelor's degree in computer science from [Gjøvik University College](http://english.hig.no/).
 
-### Contact me
+I need help to write this page. Please leave constructive comments below :)
 
-[email@domain.com](mailto:email@domain.com)
+Feel free to contact me using the comment form below if you don't have any other means of contacting me.
