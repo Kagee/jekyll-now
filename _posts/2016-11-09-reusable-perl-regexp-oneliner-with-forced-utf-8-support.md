@@ -31,7 +31,7 @@ fooŧ.no
 
 test
 
-~~~bash
+~~~ bash
 echo "fooŧ.no baŧ.no" | \
 perl -ne 'if(/([a-zŧ]{2,63}\.no)/ig) { print $1,"\n"; }'
 fooŧ.no
