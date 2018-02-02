@@ -14,9 +14,9 @@ layout: default
     {% assign nowunix = nowunix | plus: 0 %}
     {% assign one_year_ago = nowunix | minus: 94670777 %}
     {% capture posttime %}{{post.date | date: '%s'}}{% endcapture %}
-    {% assign posttime = posttime | plus: 0 %}
-    <!-- if {{posttime}} < {{one_year_ago}} -->
-    {% if posttime < one_year_ago %}  
+    {% assign postint = posttime | plus: 0 %}
+    <!-- postint: {{postint}} posttime: {{posttime}} < one_year_ago:{{one_year_ago}} nowunix: {{nowunix}}-->
+    {% if postint < one_year_ago %}  
   <div class="old-post" style="border:1px solid red; border-radius: 10px; background: #ffccb3; padding: 10px 10px 10px 10px; margin-bottom: 10px;">
       <p><i><b>
         Here be dragons! This post is more than three years old. The information and advice it presents may be deprecated, wrong, or unvise. Thread with cation.
