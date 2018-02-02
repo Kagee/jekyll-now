@@ -10,18 +10,19 @@ layout: default
     {{ page.updated | date: '<br />Last updated %A, %Y-%m-%dT%R%z' }}</p>
   </div>
   
-  <div class="old-post">
     {% capture nowunix %}{{'now' | date: '%s'}}{% endcapture %}
     {% assign nowunix = nowunix | plus: 0 %}
     {% assign one_year_ago = nowunix | minus: 31556926 %}
     {% capture posttime %}{{post.date | date: '%s'}}{% endcapture %}
     {% assign posttime = posttime | plus: 0 %}
     <!-- if {{posttime}} < {{one_year_ago}} -->
-    {% if posttime < one_year_ago %}
-      <p><b>Here be dragons!</b> This post is more than one year old. The information and advice it presents may be deprecated, wrong, or unvise. Thread with cation.</p>
+    {% if posttime < one_year_ago %}  
+  <div class="old-post" style="border:1px solid red; border-radius: 10px; background: #ffccb3; padding: 10px 10px 10px 10px; margin-bottom: 10px;">
+
+      <p><i><b>Here be dragons! This post is more than one year old. The information and advice it presents may be deprecated, wrong, or unvise. Thread with cation.</b></i></p>
+  </div>
     {% endif %}
     <!-- endif -->
-  </div>
   
   <div class="entry">
     {{ content }}
