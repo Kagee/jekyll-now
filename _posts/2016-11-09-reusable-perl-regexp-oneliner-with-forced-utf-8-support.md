@@ -24,9 +24,9 @@ The following code will print only the first match per line, and
 uses ```ŧ``` directly in the regexp.
 
 ```bash
-echo "fooŧ.no baŧ.no" | \
-perl -ne 'if(/([a-zŧ]{2,63}\.no)/ig) { print $1,"\n"; }'
-fooŧ.no
+        echo "fooŧ.no baŧ.no" | \
+        perl -ne 'if(/([a-zŧ]{2,63}\.no)/ig) { print $1,"\n"; }'
+        fooŧ.no
 ```
 If we replace ```if``` with ```while``` we will print any match found
 in the whole line.
