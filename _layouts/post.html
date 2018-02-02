@@ -13,8 +13,10 @@ layout: default
   <div class="old-post">
     {% capture nowunix %}{{'now' | date: '%s'}}{% endcapture %}
     {% assign nowunix = nowunix | plus: 0 %}
+    {% assign thenunix = nowunix | minus: 31556926 %}
     {% capture posttime %}{{post.date | date: '%s'}}{% endcapture %}
     {% assign posttime = posttime | plus: 0 %}
+    <!-- {{posttime}} < {{nowunix}} {{nowunix-31556926}} {{thenunix}} ?-->
     {% if posttime < (nowunix-31556926) %}
       <p><b>Here be dragons!</b> This post is more than one year old. The information and advice it presents may be deprecated, wrong, or unvise. Thread with cation.</p>
     {% endif %}
