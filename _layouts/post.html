@@ -13,7 +13,7 @@ layout: default
     {% capture nowunix %}{{'now' | date: '%s'}}{% endcapture %}
     {% assign nowunix = nowunix | plus: 0 %}
     {% assign one_year_ago = nowunix | minus: 94670777 %}
-    {% capture posttime %}{{post.date | date: '%s'}}{% endcapture %}
+    {% capture posttime %}{{page.date | date: '%s'}}{% endcapture %}
     {% assign postint = posttime | plus: 0 %}
     <!-- postint: {{postint}} posttime: {{posttime}} < one_year_ago:{{one_year_ago}} nowunix: {{nowunix}}-->
     {% if postint < one_year_ago %}  
