@@ -59,6 +59,8 @@ perl -ne 'if(/([a-zŧ]{2,63}\.no)/ig) { print $1,"\n"; }'
 fooŧ.no
 {% endhighlight %}
 
+test
+
 If we replace ```if``` with ```while``` we will print any match found
 in the whole line.
 ```bash
