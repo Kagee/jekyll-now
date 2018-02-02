@@ -31,16 +31,15 @@ fooŧ.no
 
 test
 
-~~~
+~~~ bash
 echo "fooŧ.no baŧ.no" | \
 perl -ne 'if(/([a-zŧ]{2,63}\.no)/ig) { print $1,"\n"; }'
 fooŧ.no
 ~~~
-{: .language-bash}
 
 test
 
-{% c bash %}
+{% hightlight bash %}
 echo "fooŧ.no baŧ.no" | \
 perl -ne 'if(/([a-zŧ]{2,63}\.no)/ig) { print $1,"\n"; }'
 fooŧ.no
