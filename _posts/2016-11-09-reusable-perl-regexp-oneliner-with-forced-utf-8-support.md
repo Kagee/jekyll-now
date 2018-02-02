@@ -44,7 +44,8 @@ Perl has support for this using ```\x{<number>}``` (see
 [perl unicode](http://perldoc.perl.org/perlunicode.html#Unicode-Regular-Expression-Support-Level))
 
 ```bash
-echo "fooŧ.no baŧ.no" | perl -CSD -ne 'while(/([a-z\x{167}]{2,63}\.no)/ig) { print $1,"\n"; }'
+echo "fooŧ.no baŧ.no" | \
+perl -CSD -ne 'while(/([a-z\x{167}]{2,63}\.no)/ig) { print $1,"\n"; }'
 fooŧ.no
 baŧ.no
 ```
