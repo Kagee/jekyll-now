@@ -10,6 +10,16 @@ layout: default
     {{ page.updated | date: '<br />Last updated %A, %Y-%m-%dT%R%z' }}</p>
   </div>
   
+  <div class="old-post">
+    {% capture nowunix %}{{'now' | date: '%s'}}{% endcapture %}
+    {% assign nowunix = nowunix | plus: 0 %}
+    {% capture posttime %}{{post.date | date: '%s'}}{% endcapture %}
+    {% assign posttime = posttime | plus: 0 %}
+    {% if posttime < (nowunix-31556926) %}
+      <p><b>Here be dragons!</b> This post is more than one year old. The information and advice it presents may be deprecated, wrong, or unvise. Thread with cation.</p>
+    {% endif %}
+  </div>
+  
   <div class="entry">
     {{ content }}
   </div>
