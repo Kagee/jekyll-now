@@ -1,6 +1,8 @@
 require "rubygems"
 require "bundler/setup"
-#require "stringex"
+require "stringex"
+
+# http://culttt.com/2015/08/05/understanding-and-using-ruby-rake/
 
 posts_dir = "_posts"
 new_post_ext = "md"
