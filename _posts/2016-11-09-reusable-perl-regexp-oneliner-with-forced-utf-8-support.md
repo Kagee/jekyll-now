@@ -11,7 +11,7 @@ I needed a regexp for extracting valid domains. This task is made
 more fun by the inclusion of Norwegian and Sami characters in the
 set of [valid characters.](https://www.norid.no/no/domeneregistrering/idn/idn_nyetegn/)
 
-<!-- more -->
+<!--more-->
 
 In addition to ```[a-z0-9\-]```, valid dot-no domains can contain the 
 Norwegian ```æ``` (ae), ```ø``` (o with stroke) and ```å``` (a with 
@@ -23,52 +23,21 @@ of my favourites.
 The following code will print only the first match per line, and 
 uses ```ŧ``` directly in the regexp.
 
-```bash
-echo "fooŧ.no baŧ.no" | \
-perl -ne 'if(/([a-zŧ]{2,63}\.no)/ig) { print $1,"\n"; }'
-fooŧ.no
-```
-
-test
-
-~~~~~~~~~~~~ bash
-echo "fooŧ.no baŧ.no" | \
-perl -ne 'if(/([a-zŧ]{2,63}\.no)/ig) { print $1,"\n"; }'
-fooŧ.no
-~~~~~~~~~~~~
-
-test
-
-    echo "fooŧ.no baŧ.no" | \
-    perl -ne 'if(/([a-zŧ]{2,63}\.no)/ig) { print $1,"\n"; }'
-    fooŧ.no
-
-test
-
-~~~ bash
-echo "fooŧ.no baŧ.no" | \
-perl -ne 'if(/([a-zŧ]{2,63}\.no)/ig) { print $1,"\n"; }'
-fooŧ.no
-~~~
-
-test
-
 {% highlight bash %}
 echo "fooŧ.no baŧ.no" | \
 perl -ne 'if(/([a-zŧ]{2,63}\.no)/ig) { print $1,"\n"; }'
 fooŧ.no
 {% endhighlight %}
 
-test
-
 If we replace ```if``` with ```while``` we will print any match found
 in the whole line.
-```bash
+
+{% highlight bash %}
 echo "fooŧ.no baŧ.no" | \
 perl -ne 'while(/([a-zŧ]{2,63}\.no)/ig) { print $1,"\n"; }'
 fooŧ.no
 baŧ.no
-```
+{% endhighlight %}
 
 Because I'm afraid the regexp (specifically the non-ASCII characters) 
 may be mangled by being saved and moved between systems, I want to 
@@ -76,12 +45,13 @@ write the Norwegian and Sami characters using their Unicode code points.
 Perl has support for this using ```\x{<number>}``` (see 
 [perl unicode](http://perldoc.perl.org/perlunicode.html#Unicode-Regular-Expression-Support-Level))
 
-```bash
+{% highlight bash %}
 echo "fooŧ.no baŧ.no" | \
 perl -CSD -ne 'while(/([a-z\x{167}]{2,63}\.no)/ig) { print $1,"\n"; }'
 fooŧ.no
 baŧ.no
-```
+{% endhighlight %}
+
 When using code points, I have to specify ```-CSD``` for the matching 
 to work. I am not really sure why this is required. If you can explain,
 please comment or tell my by other means. As you can read in
@@ -92,9 +62,9 @@ output streams should be treated as being UTF-8.
 Another problem is that if this last solution is is fed invalid UTF-8, 
 it will die fatally and stop processing input.
 
-```bash
+{% highlight bash %}
 Malformed UTF-8 character (fatal) at -e line 1, <> line X.
-```
+{% endhighlight %}
 
 To prevent this happening I currently sanitize my dirty input using 
  ```iconv -f utf-8 -t utf-8 -c```. If you have a better solution for 
