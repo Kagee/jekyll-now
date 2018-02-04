@@ -283,6 +283,28 @@ footer {
   text-align: center;
 }
 
+.old-post {
+  border-radius: 10px;
+  padding: 0px 10px 0px 10px;
+  margin-bottom: 10px;
+}
+
+.one-year-ago {
+  border: 2px solid #0F4B00;
+  background: #A8E499;
+}
+
+.two-years-ago {
+  border: 2px solid #996600;
+  background: #FFFF99;
+}
+
+.three-years-ago {
+  border: 2px solid #7E0300;
+  background: #FF5D33;
+}
+
+
 // Settled on moving the import of syntax highlighting to the bottom of the CSS
 // ... Otherwise it really bloats up the top of the CSS file and makes it difficult to find the start
 @import "highlights";

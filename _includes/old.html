@@ -1,0 +1,36 @@
+{% capture nowunix %}{{'now' | date: '%s'}}{% endcapture %}
+{% assign nowunix = nowunix | plus: 0 %}
+{% assign one_year_ago = nowunix | minus: 31556926 %}
+{% assign two_years_ago = nowunix | minus: 63113851 %}
+{% assign three_years_ago = nowunix | minus: 94670777 | minus: 63113851 %}
+{% capture posttime %}{{page.date | date: '%s'}}{% endcapture %}
+{% assign postint = posttime | plus: 0 %}
+<!-- now:{{nowunix}} post:{{postint}}
+     one:{{one_year_ago}} two:{{two_years_ago}}
+     three:{{three_years_ago}}
+-->
+{% if postint < three_years_ago %}
+  <div class="old-post three-years-ago">
+    <p>
+      <i>Here be dragons! This post is more than three years old. 
+         The information and advice it presents may be deprecated, 
+         wrong, or unvise. Thread with cation.</i>
+    </p>
+  </div>
+
+{% elsif postint < two_years_ago  %}
+  <div class="old-post two-years-ago">
+    <p>
+      <i>This post is more than two years old. The information
+         and advice it contains is dated.</i>
+    </p>
+  </div>
+
+{% elsif postint < one_year_ago  %}
+  <div class="old-post one-year-ago">
+    <p>
+      <i>This post is more than one year old.</i>
+    </p>
+  </div>
+
+{% endif %}

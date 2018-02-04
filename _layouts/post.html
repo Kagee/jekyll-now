@@ -9,22 +9,7 @@ layout: default
     <p><span title="Site last build at {{ 'now' | date: "%A, %Y-%m-%dT%R%z" }}">Written on {{ page.date | date: "%A, %Y-%m-%dT%R%z" }}
       {{ page.updated | date: '<br />Last updated %A, %Y-%m-%dT%R%z' }}</span></p>
   </div>
-  
-    {% capture nowunix %}{{'now' | date: '%s'}}{% endcapture %}
-    {% assign nowunix = nowunix | plus: 0 %}
-    {% assign one_year_ago = nowunix | minus: 94670777 %}
-    {% capture posttime %}{{page.date | date: '%s'}}{% endcapture %}
-    {% assign postint = posttime | plus: 0 %}
-    <!-- postint: {{postint}} posttime: {{posttime}} < one_year_ago:{{one_year_ago}} nowunix: {{nowunix}}-->
-    {% if postint < one_year_ago %}  
-  <div class="old-post" style="border:1px solid red; border-radius: 10px; background: #ffccb3; padding: 10px 10px 10px 10px; margin-bottom: 10px;">
-      <p><i><b>
-        Here be dragons! This post is more than three years old. The information and advice it presents may be deprecated, wrong, or unvise. Thread with cation.
-        </b></i></p>
-  </div>
-    {% endif %}
-    <!-- endif -->
-  
+  {% include old.html %}
   <div class="entry">
     {{ content }}
   </div>
