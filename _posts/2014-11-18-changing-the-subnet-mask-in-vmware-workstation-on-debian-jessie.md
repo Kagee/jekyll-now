@@ -13,7 +13,7 @@ Changing the Subnet Mask for the NAT or host-only networks in VMware Workstation
 
 Oh wait … I can't change it. The field for subnet mask in the Virtual Network Editor is not editable.
 
-<!-- more -->
+<!--more-->
 
 ![VMware Virtual Network Editor: the field for subnet mask is not editable]({{ "/images/vmware_workstation_subnet_mask_nochange.png" | absolute_url }}){:title="VMware Virtual Network Editor: the field for subnet mask is not editable"}
 
@@ -23,29 +23,29 @@ After a lot of thinking (and just after I checked ```/etc/network/interfaces``` 
 
 Before editing the file we should stop any vmware-related services that might use these files.
 
-```
+{% highlight bash %}
 $ sudo service vm<TAB>
 vmamqpd vmware vmware-USBArbitrator vmware-workstation-server
-```
+{% endhighlight %}
 
 I'm not sure witch of these services use the files we are editing, so we'll stop them all
 
-```
+{% highlight bash %}
 $ sudo service vmamqpd
 $ sudo service vmware
 $ sudo service vmware-USBArbitrator
 $ sudo service vmware-workstation-server
-```
+{% endhighlight %}
 
 For the SANS course I have set up a new host-only network vmnet2. Since we are using static IPs, and will be running malware on these systems, I have disabled DHCP and not connected a host virtual adapter. The shared folder option ```Map as a network drive in Windows guests``` still work, don't ask me how. Below is the configuration for vmnet2 with a subnet mask of 255.255.0.0.
 
-```
+{% highlight bash %}
 answer VNET_2_DHCP no
 answer VNET_2_DHCP_CFG_HASH E9892EF1006EBB5D4996DF1A377B10EB0D542B94
 answer VNET_2_HOSTONLY_NETMASK 255.255.0.0
 answer VNET_2_HOSTONLY_SUBNET 10.10.0.0
 answer VNET_2_VIRTUAL_ADAPTER no
-```
+{% endhighlight %}
 
 Success! (but continue reading, we update the DHCP configuration below the picture)
 
