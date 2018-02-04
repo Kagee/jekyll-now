@@ -284,6 +284,15 @@ footer {
   text-align: center;
 }
 
+.tag {
+    cursor: pointer;
+    background: #DAFFFF;
+    border-radius: 10px;
+    margin: 4px;
+    display: inline-block;
+    padding: 0 .5rem;
+}
+
 .old-post {
   border-radius: 10px;
   padding: 0px 10px 0px 10px;
