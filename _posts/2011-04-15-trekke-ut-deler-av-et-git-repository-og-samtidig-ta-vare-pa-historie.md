@@ -9,8 +9,10 @@ categories:
 - bash
 - norwegian
 ---
+Trekke ut deler av et git-repository, og samtidig ta vare på historie
+<!--more-->
 <p><strong>Clone</strong>
-```bash
+{% highlight bash %}
 git clone git@github.com:Kagee/fixmystreet.git
 Initialized empty Git repository in /home/hildenae/tmp/fixmystreet/.git/
 remote: Counting objects: 10461, done.
@@ -23,9 +25,9 @@ Resolving deltas: 100% (6802/6802), done.</p>
 android  bin  commonlib  conf  db  iphone  LICENSE.txt  locale  notes  perllib  README.pod  t  templates  web  web-admin</p>
 <p>ls android
 Fix My Street  README.txt  Screenshots  TODO.txt
-```
+{% endhighlight %}
 <strong>Do some magick</strong>
-```bash
+{% highlight bash %}
 git filter-branch --subdirectory-filter android -- --all
 Rewrite 33db13154330e9e7a33c0fb5c356eccb25a6edda (36/36)
 Ref 'refs/heads/master' was rewritten
@@ -37,9 +39,9 @@ Ref 'refs/remotes/origin/migrate_to_catalyst' was rewritten
 Ref 'refs/remotes/origin/reportemptyhomes' was rewritten
 ls
 Fix My Street  README.txt  Screenshots  TODO.txt
-```
+{% endhighlight %}
 <strong>Change origin</strong>
-```bash
+{% highlight bash %}
 git remote -v</p>
 <p>origin	git@github.com:Kagee/fixmystreet.git (fetch)
 origin	git@github.com:Kagee/fixmystreet.git (push)</p>
@@ -47,9 +49,9 @@ origin	git@github.com:Kagee/fixmystreet.git (push)</p>
 <p>git remote -v</p>
 <p>origin	git@github.com:Kagee/fiksgatami.git (fetch)
 origin	git@github.com:Kagee/fiksgatami.git (push)
-```
+{% endhighlight %}
 <strong>Push</strong>
-```bash
+{% highlight bash %}
 hildenae@hildenae-laptop:~/tmp/fixmystreet$ git push origin master
 Counting objects: 464, done.
 Delta compression using up to 4 threads.
@@ -58,4 +60,4 @@ Writing objects: 100% (464/464), 1.44 MiB, done.
 Total 464 (delta 159), reused 428 (delta 158)
 To git@github.com:Kagee/fiksgatami.git
  * [new branch]      master -&gt; master
-```</p>
+{% endhighlight %}</p>

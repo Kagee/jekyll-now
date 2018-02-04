@@ -25,15 +25,35 @@ categories:
 tags: []
 comments: []
 ---
-<div class="alert alert-info">
-Update: As of Ubuntu 10.10 this should not be nessesary, as OpenJDK in Ubuntu &gt;= 10.10 should work with BankID.
-</div>
-<p>In Ubuntu 10.04 (and probably onwards) OpenJDK Java and the Icedtea java plugin are the standard Java toolkit. <a href="https://www.bankid.no/Hjelp-og-nyttige-verktoy/Nyttige-verktoy/Test-din-BankID/">BankID</a> works with OpenJDK <em>(just try installing Opera 10.10. Opera pre 10.5 use OpenJDK directly, without Icedtea)</em>, Icedtea is the troublemaker.<br />
-<a id="more"></a><a id="more-11"></a></p>
-<p>Sun Java has been pushed all the way into the Canonocal partner repository, that is not enabled as default. The following lines are a quick way to enable it and install java, even if the same is possible with lengthy GUI "click-here-then-there" tutorials.</p>
-<p>[code language="bash" wraplines="false" autolinks="false" toolbar="false" gutter="false"]sudo add-apt-repository &quot;deb http://archive.canonical.com/ lucid partner&quot;<br />
-sudo apt-get update<br />
-sudo apt-get install sun-java6-plugin[/code]</p>
-<p>Line one adds the Canonical Partner repository to you software sources. There should be no complications if it is already enabled. Line two updates the list of avalible packages, so that line three can find and install the package <code>sun-java6-plugin</code> and it's dependencies.</p>
-<p>Sun Java should be the standard after this, if not, try to force it to be default with this line. And remember to restart you browser (or possibly restart your system)</p>
+Update: As of Ubuntu 10.10 this should not be nessesary, as 
+OpenJDK in Ubuntu &gt;= 10.10 should work with BankID.
+
+In Ubuntu 10.04 (and probably onwards) OpenJDK Java and the Icedtea 
+java plugin are the standard Java toolkit. 
+<a href="https://www.bankid.no/Hjelp-og-nyttige-verktoy/Nyttige-verktoy/Test-din-BankID/">BankID</a> 
+works with OpenJDK <em>(just try installing Opera 10.10. Opera pre 
+10.5 use OpenJDK directly, without Icedtea)</em>, Icedtea is the 
+troublemaker.
+
+<!--more-->
+Sun Java has been pushed all the way into the Canonocal partner 
+repository, that is not enabled as default. The following lines are 
+a quick way to enable it and install java, even if the same is 
+possible with lengthy GUI "click-here-then-there" tutorials.
+
+{% highlight bash %}
+sudo add-apt-repository "deb http://archive.canonical.com/ lucid partner"
+sudo apt-get update
+sudo apt-get install sun-java6-plugin
+{% endhighlight %}
+
+Line one adds the Canonical Partner repository to you software 
+sources. There should be no complications if it is already enabled. 
+Line two updates the list of avalible packages, so that line three 
+can find and install the package ```sun-java6-plugin``` and 
+it's dependencies.
+
+Sun Java should be the standard after this, if not, try to force it 
+to be default with this line. And remember to restart you browser 
+(or possibly restart your system)
 <p>[code language="bash" wraplines="false" gutter="false" toolbar="false"]sudo update-java-alternatives -s java-6-sun[/code] </p>

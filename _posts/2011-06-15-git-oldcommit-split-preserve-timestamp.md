@@ -11,8 +11,8 @@ categories:
 - git
 ---
 While cleaning (svn to git) the sourcecode from my bachelor thesis, i now and then needed to split a commit into two. When doing this, i still wanted to preserve the original timestamp. 
-<!-- more -->
-```bash
+<!--more-->
+{% highlight bash %}
 user@host ~/tmp $ git init .
 Initialized empty Git repository in /home/user/tmp/.git/
 user@host ~/tmp (master) $ echo -e "Hello World.\nHow are you?" > fileA.txt
@@ -41,10 +41,10 @@ user@host ~/tmp (master) $ git log --format=oneline | cat
 2563a976d8d87e8c30466549eccd1dc8e690fe4e Added file D
 50b737ae21790ec309f61024257c7f5d27e12365 Added file B
 ada1ac0a2b823e93e2ede64b17b803d9628414a7 Added file A
-```
+{% endhighlight %}
 Daam, commit ```50b737a``` was supposed to be two commits!
 ...
-```bash
+{% highlight bash %}
 hildenae@ick:~/tmp/wwsvntogit/WizardWars$ git rebase -i c2180
 Stopped at be7755e... Comments
 You can amend the commit now, with
@@ -69,7 +69,7 @@ hildenae@ick:~/tmp/wwsvntogit/WizardWars$ git commit -ac be7755e
  4 files changed, 37 insertions(+), 48 deletions(-)
 hildenae@ick:~/tmp/wwsvntogit/WizardWars$ git rebase --continue
 Successfully rebased and updated refs/heads/master.
-```</p>
+{% endhighlight %}</p>
 <h3>Referenses</h3>
 <ul>
 <li>http://book.git-scm.com/4_interactive_rebasing.html</li>
