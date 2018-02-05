@@ -21,20 +21,10 @@ categories:
 - code
 - english
 tags: []
-comments:
-- id: 4
-  author: Enabling VNC and disabling desktop effects from the command line at Moshwire.com
-  author_email: ''
-  author_url: http://www.moshwire.com/2011/02/enabling-vnc-and-disabling-desktop-effects-from-the-command-line/
-  date: !binary |-
-    MjAxMS0wMi0wNiAxMTo1NDo0OSArMDEwMA==
-  date_gmt: !binary |-
-    MjAxMS0wMi0wNiAwOTo1NDo0OSArMDEwMA==
-  content: ! '[...] You can find it here. [...] '
 ---
-Don't you just hate those day when you really need to access the desktop of a machine, but forgot or just never activated remote desktop?
+Don't you just hate those days when you need to access the desktop of a machine, but forgot or just never activated remote desktop?
 <!--more-->
-Fear not, the following lines will let you activate it from a SSH-shell:
+Fear not, the following lines will let you activate it from an SSH-shell.
 
 {% highlight bash %}
 # display number, assuming 0
@@ -56,7 +46,7 @@ gconftool-2 -s -t bool /desktop/gnome/remote_access/view_only false
 
 __Remeber to set a password after you log in (afaik you can't set this from cli)__
 
-I use the propiatary ATI drivers, and because of a bug i have to disable desktop effects, else the VNC windows will only show me a static desktop and no updates:
+I use the proprietary ATI drivers, and because of a bug I have to disable desktop effects, else the VNC windows will only show me a static desktop and no updates.
 
 {% highlight bash %}
 # disable desktop effects (if your desktop
