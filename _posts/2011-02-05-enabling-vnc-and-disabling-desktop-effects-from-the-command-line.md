@@ -14,8 +14,7 @@ wordpress_id: 314
 wordpress_url: http://blog.hild1.no/?p=314
 date: !binary |-
   MjAxMS0wMi0wNSAxMjozODoxMyArMDEwMA==
-date_gmt: !binary |-
-  MjAxMS0wMi0wNSAxMDozODoxMyArMDEwMA==
+updated: 2018-02-05 22:01:00 +0200
 categories:
 - bash
 - code
