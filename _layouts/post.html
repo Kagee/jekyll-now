@@ -6,7 +6,7 @@ layout: default
   <h1>{{ page.title }}</h1>
 
   <div class="date">
-    <p><span title="Site last build at {{ 'now' | date: "%A, %Y-%m-%dT%R%z" }}">Written on {{ page.date | date: "%A, %Y-%m-%dT%R%z" }}{{ page.updated | date: ', last updated %A, %Y-%m-%dT%R%z' }}</span></p>
+    <p><span title="Site last build at {{ 'now' | date: "%A, %Y-%m-%dT%R%z" }}">Written on {{ page.date | date: "%A, %Y-%m-%dT%R%z" }} {{ page.updated | date: '- last updated %A, %Y-%m-%dT%R%z' }}</span></p>
   </div>
   <div>
   {% for tag in page.categories %}
