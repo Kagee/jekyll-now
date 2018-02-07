@@ -7,7 +7,7 @@ layout: default
 
   <div class="date">
     <p><span title="Site last build at {{ 'now' | date: "%A, %Y-%m-%dT%R%z" }}">Written on {{ page.date | date: "%A, %Y-%m-%dT%R%z" }}
-      {{ page.updated | date: '<br />Last updated %A, %Y-%m-%dT%R%z' }}</span></p>
+      {{ page.updated | date: ', last updated %A, %Y-%m-%dT%R%z' }}</span></p>
   </div>
   <div>
   {% for tag in page.categories %}
