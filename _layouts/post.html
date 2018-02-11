@@ -1,18 +1,30 @@
 ---
 layout: default
 ---
+{% assign pagetags = "" %}
+{% for tag in page.categories %}
+  {% capture ttags %}<a href="/categories/#{{ tag | slugify }}">{{ tag | slugify }}</a>|{% endcapture %}
+  {% assign pagetags = pagetags | append:ttags %}
+{% endfor %}
+{% assign pagetags = pagetags | split:'|' | sort %}
 
 <article class="post">
-  <h1>{{ page.title }}</h1>
+  <h1 style="text-align: center">{{ page.title }}</h1>
 
-  <div class="date">
-    <p><span title="Site last build at {{ 'now' | date: "%A, %Y-%m-%dT%R%z" }}">Written on {{ page.date | date: "%A, %Y-%m-%dT%R%z" }} {{ page.updated | date: '- last updated %A, %Y-%m-%dT%R%z' }}</span></p>
+  <div class="date" style="text-align: center">
+    <p>
+      <span style="display: inline-block;" title="Site last build at {{ 'now' | date: "%A, %Y-%m-%dT%R%z" }}">
+        Written on {{ page.date | date: "%A, %Y-%m-%d %R" }}.
+      </span>
+      <span style="display: inline-block;">
+        {{ page.updated | date: ' Updated %A, %Y-%m-%d %R.' }}
+      </span>
+      <span style="display: inline-block;">
+        Tagged {{ pagetags | array_to_sentence_string }}
+      </span>
+    </p>
   </div>
-  <div>
-  {% for tag in page.categories %}
-    <a class="tag" href="/categories/#{{ tag | slugify }}">◆ {{ tag }}</a>
-    {% endfor %}
-  </div>
+  
   {% include old.html %}
   <div class="entry">
     {{ content }}
