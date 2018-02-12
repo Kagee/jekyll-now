@@ -1,5 +1,5 @@
 ## What is this?
-> This is a fork of barryclark/jekyll-now for http://beta.hild1.no
+> This is a fork of barryclark/jekyll-now for https://hild1.no
 
 ## Local Development
 
