@@ -4,4 +4,7 @@ layout: none
 User-agent: *
 Allow: /
 
+User-agent: Browsershots
+Disallow:
+
 Sitemap: {{ site.url }}/sitemap.xml
