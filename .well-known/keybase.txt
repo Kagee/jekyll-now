@@ -1,0 +1,86 @@
+==================================================================
+https://keybase.io/kagee
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://hild1.no
+  * I am kagee (https://keybase.io/kagee) on keybase.
+  * I have a public key with fingerprint 7420 F6A6 BFB4 4940 34D8  300A 0581 5A81 1322 0715
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "01017ed4a02641b6db9cbe31f250dec4a85793e59ebc1068f8c12c4d2cf0d6b9c0460a",
+      "fingerprint": "7420f6a6bfb4494034d8300a05815a8113220715",
+      "host": "keybase.io",
+      "key_id": "05815a8113220715",
+      "kid": "01017ed4a02641b6db9cbe31f250dec4a85793e59ebc1068f8c12c4d2cf0d6b9c0460a",
+      "uid": "509d6a396c3a3901caa6afe34f421c00",
+      "username": "kagee"
+    },
+    "merkle_root": {
+      "ctime": 1518446951,
+      "hash_meta": "f28a9f79fb99201894843b96b6c6c742ffa7c057f2701488e93b8b58b67ff93a",
+      "seqno": 2070616
+    },
+    "revoke": {
+      "sig_ids": [
+        "ca83699c626a2aa520dafcdc0eb5306585fd5d26add5c850ee3dc2af862a577e0f"
+      ]
+    },
+    "service": {
+      "hostname": "hild1.no",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 1
+  },
+  "ctime": 1518446956,
+  "expire_in": 157680000,
+  "prev": "87a6ca4f8e97e9c1edef5d2e80eaa7e41de38824361445be47e9c8ee42899ad3",
+  "seqno": 22,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+-----BEGIN PGP MESSAGE-----
+Version: GnuPG v1
+
+owGtU2tsFUUYvX1pgCBFEZCIxS0Bgi3M7M7OzpYWI09L06CF8jJ4md2duV3a3r3s
+3j6gIAISBAoWTA1iTJRHQYqIUnmIgLzaWtIACkYhYIFLCWqx4ANEC84iJkb/Oj9m
+MjPnO9/5zjdT1TUhEB+XtGDagkekBx+NO3bVCExb8N5rFZLhWLOljAqpkN1bWJHF
+vGiw0LakDAlAADVmIQpkjKCBLUM3DaZALqvAYiaiRNV0hak6M0wIMOHEhLKJLNnk
+wMICDBAGVEqTuB0OMTfi2uGooNWQDDim2OAGQjoCCrKIAgAFKoEqJRAqsgw0qIrA
+AsfzI4Q4g3psiO2IM7EJ/iXvv/j/WXfJPToV6Bamio5NRcwAmpRiypmCOJKhCYAP
+9JgbpsXM10pDjEnz0qRi5hYWsaDrOFHfWTNq+/dQhQQhrKtQVEe9gmAxi1IRxmVC
+da7p3NB1GUCiI4IUQ8cGNrEpHOOcaiZQNS5rACJCmK4YxFCJgTXOdcVX67FZYUfK
+EF4ADLFQ4LJSp5D5yT07JDzzpIwXJJMSBev6ZxETy5jKlKoysCg3LRMwQ1UAVonK
+LdUSl5almkQFjCmWKVNOsExVTWOAS9Pn+encUtu8R++36X75BXaRBYeE/UZFXCfq
+mE6RfxqNRrwM35Xo7IgPK2NG8D5B0LDDlnggIqKUuZ7thIVLAvlvw3CaxMojtsuC
+to9QNUyAGH4eViooiUaxSREX1mhMNyGzGBdlMAIYpRpD0GIKITJSMERINRjyUYQx
+JBNdp5byDwdloZOGBKfwLUyjJa5oaOel8Y8nBuLiAw8kxftfJ9C5U/Lf/6klMTnQ
++E3vvG2w7mRqU890ObN91Im7bw9mmR9dbm7YdG1q89W6Pi2NbHlmwr7jba3DE4or
+9IlVZReKP+yXpJVf7BkZ02/L1omTZxedWd3j7Ld8ceR66uWBzzduS112anrT3Ixx
+ocSmquI1v754deHyh+pv557bnzui8UL5gF5n65d0w8GUrPH9b3VsQs+cbE+uTdx1
+YdqP2fOvaNk9796+eGTwlF/6Th0Y2DB35qGa9R3OnrjVmdmxucnD3dfzRsw8Nv90
+/VOvHv30zo6X+8RipTnL74zOeynR2/HBJHfL9vWfVE5aNLY6q+LGsH5xZZOctqV1
+d7YXVA06snvZ0d6LlpWXvPLuupU3k8atWvFlrryxy/5NWUMb4IzW7/bG4OaaK4tp
+84yu6cMqphzdvu86mLkzu31VoCDlye7nc2oqy3e2DMl/Tp4cakzPj7yZNufiWwvj
+5Zola3+75QSLOnodeKK6MP/0gfyV+4ee6XYqlHj+xqUJW9cNKOt7rTU9JXx3xtNr
+ep0pzDsh/3Bpb/fKQX2SJ+KRU8mlk9lj49jHLfFzdpG1gc87eT1is5ZWj//j3OGC
+I96ihtpbJSnnuux+hx5sWnX65+bebd+PSsv5vfEGv5m0LY8P2LOl7HDs+Fd1PzV8
+YV1zkxLeH1Vf2z+yMjd8ILq5eWR7x+jq+gn2xpyOsr4bJjw77OuqeW8ct1sPDz50
+MKvysSW5D6+oXRxL+BM=
+=ud6v
+-----END PGP MESSAGE-----
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/kagee
+
+==================================================================
