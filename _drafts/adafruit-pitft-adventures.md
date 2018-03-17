@@ -18,6 +18,9 @@ Default 90 (top of display on button side)
 270 (top of display on header side)
 
 Append "fbcon=map:10 fbcon=font:VGA8x8 logo.nologo" to 
+
+fbcon=font:MINI4x6
+
 /boot/cmdline.txt to set framebuffer 1 as console to 
 get console on pitft during boot
 
@@ -25,3 +28,5 @@ get console on pitft during boot
 https://www.adafruit.com/product/2315
 http://lallafa.de/blog/2015/03/fbtft-setup-on-modern-raspbian/
 https://github.com/notro/fbtft/wiki/Framebuffer-use
+https://github.com/notro/fbtft/wiki/Boot-console (see Boot console for smaller font on screen)
+https://www.mjmwired.net/kernel/Documentation/fb/fbcon.txt#72
