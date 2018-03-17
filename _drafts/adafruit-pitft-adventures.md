@@ -3,21 +3,7 @@ layout: post
 title: "My Adventures with Adafruit PiTFT displays"
 categories: rpi
 ---
-# Hello world!
-
-How are you? 
-
-
-
----
-layout: post
-title: "nmap xml to csv original hostname"
-categories: code nmap mcn english
----
-# Hello world!
-
-
-Make it alive:
+# Make it alive:
 dtoverlay=pitft22
 dtparam=spi=on
 
