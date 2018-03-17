@@ -18,11 +18,18 @@ Default 90 (top of display on button side)
 270 (top of display on header side)
 
 Append "fbcon=map:10 fbcon=font:VGA8x8 logo.nologo" to 
-
-fbcon=font:MINI4x6
-
 /boot/cmdline.txt to set framebuffer 1 as console to 
 get console on pitft during boot
+
+Better/smaller fonts:
+sudo apt-get install kbd
+edit /etc/default/console-setup or sudo dpkg-reconfigure console-setup
+
+CHARMAP="UTF-8"
+CODESET="guess"
+FONTFACE="Terminus"
+FONTSIZE="6x12"
+
 
 # Links
 https://www.adafruit.com/product/2315
