@@ -30,6 +30,12 @@ CODESET="guess"
 FONTFACE="Terminus"
 FONTSIZE="6x12"
 
+if [ "$(tty)" == "/dev/tty1" ] && [ ! -f /tmp/bash-takeover-done ]; then
+ htop; touch '/tmp/bash-takeover-done';
+#else
+ # pass
+fi
+
 
 # Links
 https://www.adafruit.com/product/2315
